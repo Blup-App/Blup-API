@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity
  * Lend
  *
+ * @ApiResource
  * @ORM\Table(name="lend")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\LendRepository")
  */
