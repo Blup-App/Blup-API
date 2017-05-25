@@ -2,11 +2,14 @@
 
 namespace AppBundle\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Objet
  *
+ * @ApiResource
  * @ORM\Table(name="objet")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ObjetRepository")
  */
