@@ -2,15 +2,19 @@
 
 namespace AppBundle\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Files
+ * @ApiResource
+ * @ORM\Entity
+ * File
  *
- * @ORM\Table(name="files")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\FilesRepository")
+ * @ORM\Table(name="file")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\FileRepository")
  */
-class Files
+class File
 {
     /**
      * @var int

@@ -2,15 +2,19 @@
 
 namespace AppBundle\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Account
+ * @ApiResource
+ * @ORM\Entity
+ * User
  *
- * @ORM\Table(name="account")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\AccountRepository")
+ * @ORM\Table(name="user")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class Account
+class User
 {
     /**
      * @var int

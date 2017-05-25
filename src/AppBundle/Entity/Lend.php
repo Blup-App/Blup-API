@@ -2,15 +2,19 @@
 
 namespace AppBundle\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * lend
+ * @ApiResource
+ * @ORM\Entity
+ * Lend
  *
  * @ORM\Table(name="lend")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\lendRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\LendRepository")
  */
-class lend
+class Lend
 {
     /**
      * @var int
