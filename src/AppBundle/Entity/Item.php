@@ -40,11 +40,46 @@ class Item
     private $img;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="grade", type="integer")
+     * @ORM\Column(name="note", type="text")
      */
-    private $grade;
+    private $note;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="token", type="string", length=255)
+     */
+    private $token;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="return_date", type="date")
+     */
+    private $returnDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="lend_date", type="date")
+     */
+    private $lendDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="reminder", type="date")
+     */
+    private $reminder;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adressee", type="string", length=255)
+     */
+    private $adress;
 
     /**
      * @var string
@@ -53,10 +88,7 @@ class Item
      */
     private $owner;
 
-
     /**
-     * Get id
-     *
      * @return int
      */
     public function getId()
@@ -65,22 +97,14 @@ class Item
     }
 
     /**
-     * Set title
-     *
-     * @param string $title
-     *
-     * @return Objet
+     * @param int $id
      */
-    public function setTitle($title)
+    public function setId($id)
     {
-        $this->title = $title;
-
-        return $this;
+        $this->id = $id;
     }
 
     /**
-     * Get title
-     *
      * @return string
      */
     public function getTitle()
@@ -89,22 +113,14 @@ class Item
     }
 
     /**
-     * Set img
-     *
-     * @param string $img
-     *
-     * @return Objet
+     * @param string $title
      */
-    public function setImg($img)
+    public function setTitle($title)
     {
-        $this->img = $img;
-
-        return $this;
+        $this->title = $title;
     }
 
     /**
-     * Get img
-     *
      * @return string
      */
     public function getImg()
@@ -113,50 +129,122 @@ class Item
     }
 
     /**
-     * Set grade
-     *
-     * @param integer $grade
-     *
-     * @return Objet
+     * @param string $img
      */
-    public function setGrade($grade)
+    public function setImg($img)
     {
-        $this->grade = $grade;
-
-        return $this;
+        $this->img = $img;
     }
 
     /**
-     * Get grade
-     *
-     * @return int
+     * @return string
      */
-    public function getGrade()
+    public function getNote()
     {
-        return $this->grade;
+        return $this->note;
     }
 
     /**
-     * Set owner
-     *
-     * @param string $owner
-     *
-     * @return Objet
+     * @param string $note
      */
-    public function setOwner($owner)
+    public function setNote($note)
     {
-        $this->owner = $owner;
-
-        return $this;
+        $this->note = $note;
     }
 
     /**
-     * Get owner
-     *
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param string $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getReturnDate()
+    {
+        return $this->returnDate;
+    }
+
+    /**
+     * @param \DateTime $returnDate
+     */
+    public function setReturnDate($returnDate)
+    {
+        $this->returnDate = $returnDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLendDate()
+    {
+        return $this->lendDate;
+    }
+
+    /**
+     * @param \DateTime $lendDate
+     */
+    public function setLendDate($lendDate)
+    {
+        $this->lendDate = $lendDate;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getReminder()
+    {
+        return $this->reminder;
+    }
+
+    /**
+     * @param \DateTime $reminder
+     */
+    public function setReminder($reminder)
+    {
+        $this->reminder = $reminder;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdress()
+    {
+        return $this->adress;
+    }
+
+    /**
+     * @param string $adress
+     */
+    public function setAdress($adress)
+    {
+        $this->adress = $adress;
+    }
+
+    /**
      * @return string
      */
     public function getOwner()
     {
         return $this->owner;
+    }
+
+    /**
+     * @param string $owner
+     */
+    public function setOwner($owner)
+    {
+        $this->owner = $owner;
     }
 }
