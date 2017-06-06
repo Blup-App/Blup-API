@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource
+ * @ApiResource(attributes={"filters"={"item.numeric"}})
  * @ORM\Entity
  * Item
  *
@@ -82,11 +82,12 @@ class Item
     private $adress;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="owner", type="string", length=255)
+     * @ORM\Column(name="owner", type="integer")
      */
-    private $owner;
+    private $ownerId;
+
 
     /**
      * @return int
@@ -233,18 +234,19 @@ class Item
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getOwner()
+    public function getOwnerId()
     {
-        return $this->owner;
+        return $this->ownerId;
     }
 
     /**
-     * @param string $owner
+     * @param int $ownerId
      */
-    public function setOwner($owner)
+    public function setOwnerId($ownerId)
     {
-        $this->owner = $owner;
+        $this->ownerId = $ownerId;
     }
+
 }
